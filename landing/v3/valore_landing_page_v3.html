@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WRDXQKMP');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valore — Experiência Apple dos EUA</title>
+  <script>!function(){var t=localStorage.getItem('valore-theme')||'dark';var d=t==='system'?window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light':t;document.documentElement.dataset.theme=d}()</script>
+  <style>
+    @font-face { font-family: 'Neue Montreal'; src: url('./fonts/NeueMontreal-Light.woff2')   format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Neue Montreal'; src: url('./fonts/NeueMontreal-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Neue Montreal'; src: url('./fonts/NeueMontreal-Medium.woff2')  format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Neue Montreal'; src: url('./fonts/NeueMontreal-Bold.woff2')    format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+  </style>
+  <style>
+    :root {
+      --bg:     #07090a;
+      --bg2:    #0c1110;
+      --bg3:    #121a18;
+      --card:   #172020;
+      --border: rgba(156,166,85,0.15);
+      --blue:   #9ca655;
+      --blue2:  #8a9348;
+      --blueviv: linear-gradient(135deg, #7a8442 0%, #9ca655 100%);
+      --purple: #003434;
+      --accent: #9ca655;
+      --green:  #bfcb5b;
+      --text:   #eef0e6;
+      --muted:  rgba(238,240,230,.68);
+      --r:      16px;
+      --rl:     24px;
+    }
+
+    /* ─── TEMA CLARO ─── */
+    [data-theme="light"] {
+      --bg:    #f2f4ec;
+      --bg2:   #e8ecdf;
+      --bg3:   #dde3ce;
+      --card:  #ffffff;
+      --border: rgba(122,132,66,0.18);
+      --blue:  #6b7430;
+      --blue2: #7a8442;
+      --purple: #003434;
+      --accent: #7a8442;
+      --green: #5a6226;
+      --text:  #1a1e0e;
+      --muted: rgba(26,30,14,0.62);
+    }
+    [data-theme="light"] nav {
+      background: rgba(242,244,236,0.92);
+      border-bottom-color: rgba(122,132,66,0.14);
+    }
+    [data-theme="light"] .sec-alt  { background: var(--bg2); }
+    [data-theme="light"] .sec-light { background: var(--bg2); }
+    [data-theme="light"] .sec-sobre {
+      background: linear-gradient(160deg, #e0e8cc 0%, #d4e4b4 50%, #c8d8a8 100%);
+    }
+    [data-theme="light"] .pay-card.feat {
+      background: linear-gradient(145deg, #c8e8ce 0%, #b4d8bc 50%, #9fcbab 100%);
+      box-shadow: 0 0 40px rgba(0,100,60,.12), 0 0 0 1px rgba(122,132,66,.22);
+      color: #6c4128;
+    }
+    [data-theme="light"] .pay-card.feat h3 { color: #6c4128; }
+    [data-theme="light"] .pay-card.feat .pay-list li { color: #6c4128; opacity: .85; }
+    [data-theme="light"] .pay-card.feat .pay-list li::before { color: #6c4128; }
+    [data-theme="light"] .pay-card:not(.feat) { border-color: rgba(26,30,14,0.22); }
+    [data-theme="light"] .mcard { border-color: rgba(26,30,14,0.15); }
+    [data-theme="light"] .trust-strip {
+      background: linear-gradient(135deg, #003434 0%, #004d4d 100%);
+    }
+    [data-theme="light"] .trust-item,
+    [data-theme="light"] .trust-txt { color: #eef0e6; }
+    [data-theme="light"] .unboxing-card figcaption { color: #1a1e0e; opacity: .7; }
+    [data-theme="light"] .mobile-menu {
+      background: rgba(242,244,236,0.98);
+    }
+    [data-theme="light"] .mbp-shell {
+      background: #c8cacc;
+    }
+    [data-theme="light"] .btn { color: #07090a; }
+    [data-theme="light"] .mcard,
+    [data-theme="light"] .pay-card,
+    [data-theme="light"] .faq-item { background: #fff; }
+    [data-theme="light"] .quiz-inline { background: rgba(122,132,66,.06); }
+    [data-theme="light"] footer { background: #e0e4d4; }
+    [data-theme="light"] .final-cta { background: linear-gradient(135deg, #e0e8cc 0%, #c8d8a8 100%); }
+
+    /* ─── THEME TOGGLE ─── */
+    .theme-toggle {
+      display: flex; align-items: center;
+      background: rgba(156,166,85,.08);
+      border: 1px solid rgba(156,166,85,.22);
+      border-radius: 50px; padding: 3px; gap: 1px;
+      margin-right: 12px;
+    }
+    .theme-btn {
+      width: 28px; height: 28px; border-radius: 50%; border: none;
+      background: none; color: var(--muted); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; transition: background .2s, color .2s;
+      flex-shrink: 0;
+    }
+    .theme-btn.active {
+      background: var(--bg3);
+      color: var(--text);
+    }
+    [data-theme="light"] .theme-toggle {
+      background: rgba(122,132,66,.1);
+      border-color: rgba(122,132,66,.25);
+    }
+    [data-theme="light"] .theme-btn.active {
+      background: rgba(122,132,66,.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background .3s, color .3s;
+    }
+    h1, h2 { font-weight: 600; letter-spacing: -0.02em; }
+    h3, strong, .btn, .btn-ghost, .btn-quiz, .nav-cta { font-weight: 500; }
+    .sec-label, .footer-col h4, .footer-bottom, .dep-date, .dep-handle,
+    .mbr-date, .mbr-urlbar, .hero-pill, .faq-arr { font-weight: 300; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(7,9,10,0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(156,166,85,0.1);
+      padding: 16px 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: #bfcb5b; text-decoration: none;
+      font-size: 1.15rem; font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo svg { height: 28px; width: auto; display: block; color: #bfcb5b; }
+    @media (min-width: 961px) { .nav-logo svg { height: 34px; } .nav-logo { font-size: 1.25rem; } }
+    .nav-brand-row { display: inline-flex; align-items: center; gap: 12px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.86rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: linear-gradient(135deg, #7a8442 0%, #9ca655 100%);
+      color: #07090a; padding: 10px 22px; border-radius: 50px;
+      text-decoration: none; font-size: 0.84rem; font-weight: 500;
+      white-space: nowrap;
+      box-shadow: 0 4px 18px rgba(156,166,85,.35);
+      transition: opacity .2s, transform .2s, box-shadow .2s;
+    }
+    .nav-cta:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(156,166,85,.45); }
+    .nav-brand { display: flex; align-items: center; }
+    .nav-menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.4rem; cursor: pointer; }
+
+    /* ─── MOBILE MENU ─── */
+    .mobile-menu {
+      display: none; position: fixed; top: 62px; left: 0; right: 0; bottom: 0;
+      background: var(--bg2); flex-direction: column; z-index: 99; overflow-y: auto;
+    }
+    .mobile-menu.active { display: flex; }
+    .mobile-menu a { padding: 18px 24px; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); font-weight: 500; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-quick-nav {
+      display: none; position: fixed; top: 62px; left: 0; right: 0;
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      padding: 10px 16px; z-index: 98; gap: 8px; overflow-x: auto; flex-wrap: nowrap;
+    }
+    .mobile-quick-nav.show { display: flex; }
+    .mobile-quick-nav a {
+      display: inline-flex; align-items: center; padding: 7px 14px;
+      background: rgba(156,166,85,.08); border: 1px solid rgba(156,166,85,.2);
+      border-radius: 20px; font-size: .78rem; color: var(--accent); text-decoration: none; white-space: nowrap;
+    }
+
+    /* ─── SHARED ─── */
+    .sec-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+    .sec  { padding: 110px 0; }
+    .sec-alt { padding: 110px 0; background: var(--bg2); }
+    .divider { height: 1px; background: linear-gradient(90deg,transparent,var(--border),transparent); }
+
+    .sec-label {
+      display: block; font-size: .7rem; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+    }
+    .sec-title {
+      font-size: clamp(1.9rem,3.8vw,2.9rem); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.5px; margin-bottom: 14px;
+    }
+    .sec-title .g { background: linear-gradient(180deg,#d4dc7a 0%,#7a8442 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .sec-sub { color: var(--muted); font-size: .96rem; max-width: 520px; line-height: 1.8; margin-bottom: 56px; }
+    .center { text-align: center; }
+    .center .sec-sub { margin-left: auto; margin-right: auto; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, #7a8442 0%, #9ca655 100%);
+      color: #07090a; padding: 15px 32px; border-radius: 50px;
+      font-size: .94rem; font-weight: 700; text-decoration: none;
+      box-shadow: 0 8px 32px rgba(156,166,85,.3);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 16px 44px rgba(156,166,85,.45); }
+    .btn .arr { transition: transform .2s; }
+    .btn:hover .arr { transform: translateX(5px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(156,166,85,.06); border: 1px solid rgba(156,166,85,.2);
+      color: var(--text); padding: 14px 28px; border-radius: 50px;
+      font-size: .9rem; font-weight: 600; text-decoration: none;
+      transition: background .2s, border-color .2s;
+    }
+    .btn-ghost:hover { background: rgba(156,166,85,.1); border-color: rgba(156,166,85,.35); }
+
+    /* ─── HERO ─── */
+    .hero-bg-glow  { position: fixed; pointer-events: none; z-index: 0; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle,rgba(156,166,85,.07) 0%,transparent 65%); top: -150px; right: -200px; }
+    .hero-bg-glow2 { position: fixed; pointer-events: none; z-index: 0; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,rgba(0,52,52,.09) 0%,transparent 65%); bottom: 0; left: -150px; }
+
+    .hero-wrap {
+      min-height: 100vh; position: relative;
+      display: flex; align-items: center;
+      padding: 140px 56px 90px;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 80px;
+      align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+    }
+
+    /* Hero text */
+    h1.hero-headline {
+      font-size: clamp(2.6rem,5.2vw,4.8rem);
+      font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 28px;
+    }
+    .typing-word {
+      display: inline-block;
+      background: linear-gradient(135deg, #7a8442 0%, #9ca655 100%);
+      padding: 4px 18px 8px; border-radius: 10px;
+      color: #07090a; -webkit-text-fill-color: #07090a;
+      white-space: nowrap;
+      box-shadow: 0 6px 28px rgba(156,166,85,.35);
+    }
+    .cursor {
+      display: inline-block; width: 3px; height: .82em;
+      background: rgba(156,166,85,.8); margin-left: 3px;
+      vertical-align: middle; border-radius: 2px;
+      animation: blink 1.1s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .hero-sub { font-size: 1.02rem; color: var(--muted); line-height: 1.82; margin-bottom: 40px; max-width: 460px; }
+    .hero-sub strong { color: var(--text); }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Hero Visual — Foto full-bleed */
+    .hero-visual { position: relative; min-height: 520px; }
+    .hero-photo-bg {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 56%;
+      z-index: 0; overflow: hidden;
+    }
+    .hero-photo-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 72%;
+      display: block; filter: brightness(.82);
+    }
+    .hero-photo-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(to right, var(--bg) 0%, rgba(7,9,10,.7) 22%, transparent 62%),
+        linear-gradient(to top,   var(--bg) 0%, transparent 22%),
+        linear-gradient(to bottom, rgba(7,9,10,.55) 0%, transparent 18%);
+    }
+    .hero-grid { position: relative; z-index: 1; }
+    .fb {
+      position: absolute; z-index: 2;
+      background: rgba(23,32,32,.9); border: 1px solid rgba(156,166,85,.22);
+      backdrop-filter: blur(12px);
+      border-radius: 12px; padding: 10px 16px;
+      font-size: .81rem; font-weight: 600; color: var(--text);
+      display: flex; align-items: center; gap: 8px; white-space: nowrap;
+      box-shadow: 0 8px 28px rgba(0,0,0,.4);
+    }
+    .fb1 { bottom: 22px; left: 16px;  animation: fl 3.6s ease-in-out infinite 0s; }
+    .fb2 { top: 22px;   right: 16px; animation: fl 3.6s ease-in-out infinite .8s; }
+    .fb3 { bottom: 22px; right: 16px; animation: fl 3.6s ease-in-out infinite 1.6s; }
+    .fb4 { top: 22px;   left: 16px;  animation: fl 3.6s ease-in-out infinite 2.4s; }
+    @keyframes fl { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+    /* ─── DIVIDER COM RESPIRO ─── */
+    .breathing-divider {
+      padding: 48px 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .breathing-divider::after {
+      content: '';
+      width: 50%; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(156,166,85,.55), rgba(156,166,85,.55), transparent);
+      border-radius: 2px;
+    }
+    .breathing-divider-white {
+      padding: 36px 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .breathing-divider-white::after {
+      content: '';
+      width: 38%; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(156,166,85,.3), rgba(156,166,85,.3), transparent);
+      border-radius: 2px;
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity .72s cubic-bezier(.4,0,.2,1), transform .72s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal-left {
+      opacity: 0; transform: translateX(-36px);
+      transition: opacity .72s cubic-bezier(.4,0,.2,1), transform .72s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal-right {
+      opacity: 0; transform: translateX(36px);
+      transition: opacity .72s cubic-bezier(.4,0,.2,1), transform .72s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal.visible, .reveal-left.visible, .reveal-right.visible {
+      opacity: 1; transform: none;
+    }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .22s; }
+    .reveal-delay-3 { transition-delay: .34s; }
+    .reveal-delay-4 { transition-delay: .46s; }
+
+    /* ─── SEÇÃO CLARA ─── */
+    .sec-light { padding: 110px 0; background: var(--bg2); }
+    .sec-light .sec-label { color: var(--accent); }
+    .sec-light .sec-title { color: var(--text); }
+    .sec-light .sec-sub   { color: var(--muted); }
+    .sec-light .step      { border-bottom-color: rgba(156,166,85,.1); }
+    .sec-light .step-b strong { color: var(--text); }
+    .sec-light .step-b p      { color: var(--muted); }
+    .sec-light .step-b a      { color: var(--accent); }
+    .sec-light .step-n    { box-shadow: 0 8px 20px rgba(156,166,85,.2); }
+
+    /* ─── TRUST STRIP (confiança) ─── */
+    .trust-strip {
+      background: linear-gradient(135deg, #003434 0%, #004d4d 100%);
+      padding: 44px 0;
+      box-shadow: 0 8px 40px rgba(0,52,52,.4);
+    }
+    .trust-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 40px;
+      display: flex; gap: 20px; align-items: stretch;
+    }
+    .trust-item {
+      flex: 1 1 0; min-width: 0;
+      display: flex; align-items: center; gap: 14px;
+      color: #eef0e6;
+      padding: 4px 8px;
+    }
+    .trust-item + .trust-item { border-left: 1px solid rgba(255,255,255,.14); padding-left: 20px; }
+    .trust-ico {
+      font-size: 1.6rem; flex-shrink: 0;
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(191,203,91,.14);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .trust-txt { font-size: .9rem; font-weight: 500; color: #eef0e6; line-height: 1.4; }
+    .trust-item--wide { flex: 1.3 1 0; }
+
+    /* ─── UNBOXING STRIP (prova visual) ─── */
+    .unboxing-strip { padding: 44px 0 0; background: var(--bg); }
+    .unboxing-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .unboxing-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .unboxing-card {
+      margin: 0;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .unboxing-card img {
+      width: 100%; aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: var(--rl);
+      border: 1px solid var(--border);
+      background: var(--bg3);
+      display: block;
+    }
+    .unboxing-card figcaption {
+      font-size: .82rem; color: var(--muted); font-weight: 400;
+      padding: 0 4px;
+    }
+
+    /* ─── VÍDEOS ─── */
+    .video-gallery { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; align-items: start; }
+    .video-item { display: flex; flex-direction: column; gap: 14px; }
+    .video-headline { font-size: 1.05rem; font-weight: 700; text-align: center; line-height: 1.4; min-height: 5rem; display: flex; align-items: center; justify-content: center; }
+    .video-box {
+      position: relative; width: 100%; aspect-ratio: 16/9;
+      background: var(--bg3); border-radius: var(--rl);
+      border: 1px solid var(--border); overflow: hidden;
+    }
+    .video-box video { width: 100%; height: 100%; object-fit: cover; }
+    .trust-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 56px; }
+    .trust-chip {
+      display: flex; align-items: center; gap: 8px;
+      background: #ffffff; border: none;
+      padding: 10px 20px; border-radius: 50px; font-size: .8rem; color: var(--blue2); font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0,0,0,.18);
+    }
+    .trust-chip .dot { color: var(--green); }
+
+    /* ─── CARDS ─── */
+    .card-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .mcard {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--rl); padding: 32px; position: relative; overflow: hidden;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .mcard::after { content:''; position:absolute; inset:0; border-radius:inherit; background:linear-gradient(135deg,rgba(156,166,85,.06),rgba(0,52,52,.04)); opacity:0; transition:opacity .25s; }
+    .mcard:hover { border-color: rgba(156,166,85,.35); transform: translateY(-4px); box-shadow: 0 20px 44px rgba(0,0,0,.3); }
+    .mcard:hover::after { opacity:1; }
+    .ic {
+      width: 50px; height: 50px; border-radius: 14px;
+      background: linear-gradient(135deg,rgba(156,166,85,.15),rgba(0,52,52,.12));
+      border: 1px solid rgba(156,166,85,.2);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px;
+    }
+    .mcard h3 { font-size: .97rem; font-weight: 700; margin-bottom: 10px; }
+    .mcard p  { font-size: .86rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─── PRAZOS ─── */
+    .prazo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+    .prazo-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--rl); padding: 30px;
+      display: flex; gap: 18px; align-items: flex-start;
+    }
+    .prazo-icon { font-size: 2.2rem; }
+    .prazo-card h3 { font-size: .93rem; font-weight: 700; margin-bottom: 7px; }
+    .prazo-card p  { color: var(--muted); font-size: .87rem; line-height: 1.65; }
+    .prazo-note {
+      padding: 15px 20px;
+      background: rgba(156,166,85,.06); border: 1px solid rgba(156,166,85,.14);
+      border-radius: 12px; color: var(--muted); font-size: .87rem;
+    }
+    .prazo-note strong { color: var(--accent); }
+    .prazo-bottom {
+      position: relative;
+      margin-top: 22px;
+      padding-right: 320px;
+    }
+    .prazo-mascot {
+      position: absolute;
+      right: 0; top: -60px;
+      height: 320px; width: auto;
+      filter: drop-shadow(0 6px 24px rgba(0,0,0,.3));
+      pointer-events: none;
+    }
+    .prazo-bottom .hero-btns { margin-top: 28px; }
+
+    /* ─── ABOUT ─── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-vid-box { border-radius: var(--rl); overflow: hidden; border: 1px solid rgba(156,166,85,.18); box-shadow: 0 0 60px rgba(156,166,85,.1); }
+    .about-vid-box video { width: 100%; display: block; }
+    .about-copy h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 800; margin-bottom: 20px; line-height: 1.15; }
+    .about-copy h2 em { font-style: normal; background: linear-gradient(180deg,#d4dc7a 0%,#7a8442 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .about-copy p { color: var(--muted); margin-bottom: 16px; line-height: 1.82; font-size: .95rem; }
+    .about-copy p strong { color: var(--text); }
+    .seal {
+      margin-top: 30px; padding: 18px 22px;
+      background: rgba(156,166,85,.07);
+      border: 1px solid rgba(156,166,85,.2); border-radius: 14px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .seal-text strong { font-size: .93rem; color: var(--text); display: block; }
+    .seal-text span   { font-size: .8rem; color: var(--muted); }
+
+    /* ─── FEEDBACKS TEXT ─── */
+    .dep-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--rl); padding: 28px;
+      transition: border-color .2s; height: 100%;
+    }
+    .dep-card:hover { border-color: rgba(156,166,85,.3); }
+    .dep-stars { color: #d4a520; font-size: .85rem; margin-bottom: 16px; }
+    .dep-text  { font-size: .88rem; color: var(--muted); line-height: 1.72; margin-bottom: 20px; }
+    .dep-user  { display: flex; align-items: center; gap: 12px; }
+    .dep-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg,var(--blue2),var(--purple)); display:flex; align-items:center; justify-content:center; font-size:1.1rem; color: var(--text); }
+    .dep-name   { font-size: .86rem; font-weight: 700; }
+    .dep-handle { font-size: .76rem; color: var(--muted); }
+    .dep-product { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-size: .78rem; color: var(--accent); font-weight: 600; }
+
+    /* ─── IMAGE GALLERY ─── */
+    .img-gallery { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 52px; }
+    .img-item { border-radius: var(--r); border: 1px solid var(--border); overflow: hidden; aspect-ratio: 16/9; cursor: pointer; }
+    .img-item img { width: 100%; height: 100%; object-fit: contain; background: var(--bg3); transition: transform .3s; }
+    .img-item:hover img { transform: scale(1.02); }
+    .img-item:hover { border-color: rgba(156,166,85,.35); }
+
+    /* ─── STEPS ─── */
+    .steps-wrap { max-width: 680px; margin: 0 auto; }
+    .step {
+      display: flex; gap: 24px; align-items: flex-start;
+      padding: 26px 0; border-bottom: 1px solid rgba(156,166,85,.08);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-n {
+      width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+      background: linear-gradient(135deg,var(--blue2),var(--purple));
+      display: flex; align-items: center; justify-content: center;
+      font-size: .95rem; font-weight: 800; color: #07090a;
+      box-shadow: 0 8px 20px rgba(156,166,85,.25);
+    }
+    .step-b strong { font-size: .97rem; color: var(--text); display: block; margin-bottom: 6px; font-weight: 700; }
+    .step-b p      { color: var(--muted); font-size: .9rem; line-height: 1.72; }
+    .steps-cta { text-align: center; margin-top: 48px; }
+
+    /* ─── PAGAMENTO ─── */
+    .pay-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; align-items: stretch; }
+    .pay-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--rl); padding: 32px; position: relative;
+      transition: border-color .2s;
+      display: flex; flex-direction: column;
+    }
+    .pay-card .pay-list { flex: 0 0 auto; }
+    .pay-card:hover { border-color: rgba(156,166,85,.35); }
+    .pay-card.feat  { border-color: rgba(156,166,85,.55); background: linear-gradient(145deg, #122c10 0%, #0a2218 50%, #003434 100%); box-shadow: 0 0 50px rgba(0,52,52,.5), 0 0 0 1px rgba(156,166,85,.15); }
+    .pay-card.feat .pay-list li { color: rgba(238,240,230,.85); }
+    .pay-card.feat h3 { color: var(--text); }
+    .pay-top {
+      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg,var(--blue2),var(--purple));
+      color: #fff; padding: 4px 16px; border-radius: 30px; font-size: .7rem; font-weight: 700; white-space: nowrap;
+    }
+    .pay-card h3 { font-size: .97rem; font-weight: 700; margin-bottom: 18px; }
+    .pay-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .pay-list li { font-size: .86rem; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
+    .pay-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .pay-alert { margin-top: 28px; padding: 14px 18px; background: rgba(239,68,68,.07); border: 1px solid rgba(239,68,68,.18); border-radius: 12px; font-size: .84rem; color: #fca5a5; }
+
+    /* ─── CONTRATO (1 coluna) ─── */
+    .contract-grid { max-width: 640px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .contract-mascot { width: 220px; max-width: 70%; display: block; margin: 0 auto 20px; filter: drop-shadow(0 4px 16px rgba(0,0,0,.3)); }
+    .contract-copy { text-align: center; }
+    .contract-copy h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; margin-bottom: 20px; line-height: 1.15; }
+    .contract-copy h2 em { font-style: normal; background: linear-gradient(180deg,#d4dc7a 0%,#7a8442 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .contract-copy p { color: var(--muted); margin-bottom: 14px; line-height: 1.8; font-size: .94rem; }
+    .contract-pts { list-style: none; margin: 22px auto; display: flex; flex-direction: column; gap: 10px; text-align: left; max-width: 480px; }
+    .contract-pts li { display: flex; gap: 10px; font-size: .9rem; color: var(--muted); }
+    .contract-pts li::before { content: '✓'; color: var(--green); font-weight: 800; flex-shrink: 0; }
+    .quiz-inline {
+      margin-top: 28px;
+      background: rgba(156,166,85,.07);
+      border: 1px solid rgba(156,166,85,.2); border-radius: 16px; padding: 22px 26px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .qi-text strong { display: block; font-size: .93rem; font-weight: 700; margin-bottom: 4px; }
+    .qi-text span   { font-size: .82rem; color: var(--muted); }
+    .btn-quiz { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg,var(--blue2),var(--purple)); color: #fff; padding: 12px 24px; border-radius: 50px; font-size: .86rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+
+    /* ─── FAQ ─── */
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; transition: border-color .2s, box-shadow .2s; box-shadow: 0 2px 12px rgba(156,166,85,.04); }
+    .faq-item.open { border-color: rgba(156,166,85,.4); box-shadow: 0 4px 20px rgba(156,166,85,.1); }
+    .faq-q { width: 100%; background: none; border: none; color: var(--text); padding: 20px 24px; text-align: left; font-size: .9rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { color: var(--accent); }
+    .faq-arr { font-size: .74rem; color: var(--muted); transition: transform .25s; flex-shrink: 0; }
+    .faq-a { padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s; color: var(--muted); font-size: .88rem; line-height: 1.75; }
+    .faq-item.open .faq-a   { max-height: 520px; padding: 0 24px 20px; }
+    .faq-item.open .faq-arr { transform: rotate(180deg); }
+
+    /* ─── QUIZ BANNER ─── */
+    .quiz-banner { padding: 100px 40px; text-align: center; }
+    .quiz-banner-inner { max-width: 640px; margin: 0 auto; }
+    .quiz-banner-inner h2 { font-size: clamp(1.7rem,3.5vw,2.6rem); font-weight: 900; margin-bottom: 16px; letter-spacing: -.5px; }
+    .quiz-banner-inner h2 em { font-style: normal; background: linear-gradient(180deg,#d4dc7a 0%,#7a8442 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .quiz-banner-inner p { color: var(--muted); font-size: .97rem; margin-bottom: 36px; line-height: 1.75; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+    /* ─── CTA FINAL ─── */
+    .final-cta { text-align: center; padding: 130px 40px; position: relative; overflow: hidden; }
+    .final-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center,rgba(156,166,85,.1) 0%,transparent 65%); }
+    .final-inner { position: relative; max-width: 680px; margin: 0 auto; }
+    .final-inner h2 { font-size: clamp(2.4rem,5vw,3.8rem); font-weight: 900; margin-bottom: 20px; letter-spacing: -1.5px; line-height: 1.07; }
+    .final-inner h2 em { font-style: normal; background: linear-gradient(180deg,#d4dc7a 0%,#7a8442 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .final-inner p { color: var(--muted); font-size: .97rem; margin-bottom: 48px; line-height: 1.8; }
+    .final-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 60px 56px 34px; }
+    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 52px; margin-bottom: 44px; }
+    .footer-brand .nav-logo { font-size: 1.25rem; display: inline-flex; margin-bottom: 14px; color: #bfcb5b; }
+    .footer-brand .nav-logo svg { display: none; }
+    .footer-brand p { color: var(--muted); font-size: .84rem; line-height: 1.78; max-width: 260px; }
+    .footer-col h4 { font-size: .7rem; font-weight: 700; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a, .footer-col p { display: block; color: var(--muted); font-size: .84rem; text-decoration: none; margin-bottom: 10px; line-height: 1.6; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: .76rem; color: var(--muted); flex-wrap: wrap; gap: 12px; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .nav-menu-toggle { display: block; }
+      .nav-brand-row { gap: 8px; }
+      .hero-wrap { padding: 120px 24px 80px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 64px; }
+      .hero-visual { height: 360px; }
+      .hero-photo-bg { width: 65%; }
+      .fb1 { left: -10%; } .fb3 { left: -12%; }
+      h1.hero-headline { font-size: clamp(2.4rem,8vw,3.8rem); }
+      .sec-inner { padding: 0 24px; }
+      .sec, .sec-alt { padding: 84px 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .card-grid, .pay-grid { grid-template-columns: 1fr; }
+      .prazo-grid { grid-template-columns: 1fr; }
+      .video-gallery { grid-template-columns: 1fr; }
+
+      /* Trust strip: 2x2 no mobile */
+      .trust-strip { padding: 28px 0; }
+      .trust-inner {
+        display: grid; grid-template-columns: repeat(2, 1fr);
+        gap: 16px 14px;
+        padding: 0 20px;
+      }
+      .trust-item + .trust-item { border-left: none; padding-left: 0; }
+      .trust-item { flex-direction: column; text-align: left; align-items: flex-start; }
+      .trust-item--wide { grid-column: span 2; flex-direction: row; align-items: center; }
+      .trust-ico { width: 40px; height: 40px; font-size: 1.4rem; }
+      .trust-txt { font-size: .84rem; }
+
+      /* Unboxing: rolagem horizontal com scroll-snap */
+      .unboxing-strip { padding: 32px 0 0; }
+      .unboxing-inner { padding: 0 24px; }
+      .unboxing-row {
+        display: flex; grid-template-columns: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -24px;
+        padding: 0 24px 8px;
+        gap: 12px;
+      }
+      .unboxing-row::-webkit-scrollbar { display: none; }
+      .unboxing-card {
+        flex: 0 0 68%;
+        scroll-snap-align: center;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      footer { padding: 48px 24px 28px; }
+    }
+    @media (max-width: 960px) {
+      .theme-toggle { display: none; }
+      /* mascote prazos mobile: remove absolute, empilha abaixo dos botões */
+      .prazo-bottom { padding-right: 0; }
+      .prazo-mascot { position: static; display: block; height: 200px; margin: 24px auto 0; }
+      .prazo-bottom .hero-btns { width: 100%; justify-content: center; }
+      /* mascote contrato: limita largura em mobile */
+      .contract-mascot { width: min(260px, 70vw); }
+    }
+    @media (max-width: 640px) {
+      .hero-visual { display: none; }
+      .hero-photo-bg { width: 100%; opacity: .22; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .final-btns { flex-direction: column; align-items: center; }
+      .btn { font-size: .84rem; padding: 14px 22px; }
+      .btn-ghost { font-size: .84rem; padding: 13px 20px; }
+      .prazo-mascot { height: 180px; }
+      .contract-mascot { width: min(220px, 65vw); }
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      .card-grid { grid-template-columns: repeat(2,1fr); }
+    }
+
+    /* ─── MACBOOK OVERLAY (PNG real) ─── */
+    .mbp-wrap {
+      max-width: 920px; margin: 10px auto 0;
+      position: relative;
+      /* mantém proporção 1:1 do PNG (1000×1000) */
+      aspect-ratio: 1 / 1;
+      filter: drop-shadow(0 40px 80px rgba(0,0,0,.55));
+    }
+    /* PNG do MacBook por cima — tela e fundo são transparentes */
+    .mbp-overlay {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; z-index: 2;
+      display: block;
+    }
+    /* Área da tela: posicionada dentro do PNG (medido em pixels: y=252-726, x=120-880 de 1000×1000) */
+    .mbp-screen-area {
+      position: absolute;
+      top: 25.2%; left: 12%;
+      width: 76%; height: 47.4%;
+      z-index: 1; overflow: hidden;
+      background: #0d1110;
+    }
+    .mbp-menubar {
+      background: rgba(9,9,18,1); padding: 8px 14px;
+      display: flex; align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .mbp-dots { display: flex; gap: 6px; }
+    .mbp-dots span { width: 9px; height: 9px; border-radius: 50%; display: block; }
+    .md-r { background: #ff5f57; } .md-y { background: #febc2e; } .md-g { background: #28c840; }
+    .mbp-title {
+      flex: 1; text-align: center; margin-left: 0;
+      font-size: .63rem; color: rgba(255,255,255,.22); letter-spacing: .3px;
+      padding-right: 44px;
+    }
+    .mbp-browser { height: calc(100% - 38px); }
+
+    /* ─── JOURNEY TIMELINE — COMO ENCOMENDAR ─── */
+    .journey-wrap {
+      margin-top: 52px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(156,166,85,.25) transparent;
+    }
+    .journey-scroll {
+      display: flex; align-items: flex-start;
+      position: relative;
+      min-width: 860px;
+      padding: 20px 28px 8px;
+    }
+    .journey-6 { min-width: 760px; }
+    /* Linha conectora horizontal */
+    .journey-scroll::before {
+      content: '';
+      position: absolute;
+      top: 56px; /* metade do ícone sem badge */
+      left: 8%; right: 8%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue2) 0%, var(--blue) 60%, var(--green) 100%);
+      border-radius: 2px;
+    }
+    /* Passo destacado (etapa 5 — importação) */
+    .jstep-featured .jstep-icon {
+      border-color: #bfcb5b;
+      border-width: 4px;
+      box-shadow: 0 0 0 7px rgba(191,203,91,.18), 0 10px 28px rgba(191,203,91,.28);
+    }
+    .jstep {
+      flex: 1;
+      display: flex; flex-direction: column; align-items: center;
+      position: relative; z-index: 1;
+      padding: 0 6px;
+    }
+    /* Badge com número */
+    .jstep-badge { display: none; }
+    /* Círculo com ícone */
+    .jstep-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--blue2);
+      box-shadow: 0 0 0 6px rgba(156,166,85,.08), 0 8px 24px rgba(156,166,85,.14);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .jstep:hover .jstep-icon {
+      transform: translateY(-6px);
+      box-shadow: 0 0 0 6px rgba(156,166,85,.18), 0 18px 36px rgba(156,166,85,.24);
+    }
+    /* Último passo: destaque lime */
+    .jstep:last-child .jstep-icon {
+      background: linear-gradient(135deg, #a8b845, #bfcb5b);
+      border-color: #bfcb5b;
+      box-shadow: 0 0 0 6px rgba(191,203,91,.15), 0 8px 24px rgba(191,203,91,.25);
+    }
+    .jstep:last-child .jstep-badge { background: #a8b845; }
+    /* Texto */
+    .jstep-label { text-align: center; padding: 0 4px; }
+    .jstep-label strong { display: block; font-size: .8rem; color: var(--text); font-weight: 700; margin-bottom: 5px; line-height: 1.3; }
+    .jstep-label p { font-size: .73rem; color: var(--muted); line-height: 1.55; }
+    .jstep-label a { color: var(--blue2); font-weight: 600; text-decoration: none; }
+
+    @media (max-width: 960px) {
+      .journey-scroll { min-width: 700px; padding: 16px 16px 8px; }
+      .jstep-icon { width: 58px; height: 58px; font-size: 1.3rem; }
+      .journey-scroll::before { top: 49px; }
+    }
+
+    @media (max-width: 640px) {
+      .journey-wrap { overflow-x: visible; padding-bottom: 0; }
+      .journey-scroll {
+        flex-direction: column;
+        min-width: unset;
+        padding: 8px 0 8px 16px;
+        gap: 0;
+        align-items: stretch;
+      }
+      /* linha vertical no lugar da horizontal */
+      .journey-scroll::before {
+        top: 24px; bottom: 24px;
+        left: 34px; right: auto;
+        width: 3px; height: auto;
+        background: linear-gradient(180deg, var(--blue2) 0%, var(--blue) 60%, var(--green) 100%);
+      }
+      /* cada passo vira linha: badge+ícone à esquerda, texto à direita */
+      .jstep {
+        display: grid;
+        grid-template-columns: 52px 1fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 18px;
+        row-gap: 2px;
+        padding: 8px 12px 8px 0;
+        align-items: start;
+      }
+      .jstep-badge { grid-column: 1; grid-row: 1; justify-self: center; margin-bottom: 2px; }
+      .jstep-icon  { grid-column: 1; grid-row: 2; justify-self: center; width: 52px; height: 52px; font-size: 1.2rem; margin-bottom: 0; }
+      .jstep-label { grid-column: 2; grid-row: 1 / 3; align-self: center; text-align: left; padding: 0; }
+      .jstep-label strong { font-size: .88rem; }
+      .jstep-label p { font-size: .81rem; }
+    }
+
+    /* ─── SEÇÃO SOBRE (fundo claro + devices) ─── */
+    .sec-sobre {
+      padding: 110px 0;
+      background: linear-gradient(160deg, #081e0e 0%, #0c2a18 50%, #061810 100%);
+      position: relative; overflow: visible;
+    }
+    .sec-sobre .sec-label  { color: var(--blue2); }
+    .sec-sobre .about-copy h2 { color: var(--text); }
+    .sec-sobre .about-copy h2 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .sec-sobre .about-copy p { color: var(--muted); }
+    .sec-sobre .about-copy p strong { color: var(--text); }
+    .sec-sobre .seal {
+      background: rgba(156,166,85,.07); border-color: rgba(156,166,85,.2);
+    }
+    .sec-sobre .seal-text strong { color: var(--text); }
+    .sec-sobre .seal-text span   { color: var(--muted); }
+    .sec-sobre .about-vid-box { border-color: rgba(156,166,85,.18); }
+
+    /* Dispositivos decorativos */
+    .deco-float { position: absolute; pointer-events: none; }
+    .deco-iphone {
+      width: 54px; height: 110px; border-radius: 14px;
+      border: 2.5px solid rgba(156,166,85,.2);
+      background: rgba(156,166,85,.04);
+      top: 8%; right: 7%;
+      animation: devfloat 5s ease-in-out infinite;
+    }
+    .deco-iphone::before {
+      content: ''; position: absolute;
+      top: 10px; left: 50%; transform: translateX(-50%);
+      width: 16px; height: 4px;
+      background: rgba(156,166,85,.25); border-radius: 3px;
+    }
+    .deco-iphone::after {
+      content: ''; position: absolute;
+      bottom: 9px; left: 50%; transform: translateX(-50%);
+      width: 15px; height: 15px; border-radius: 50%;
+      border: 2px solid rgba(156,166,85,.2);
+    }
+    .deco-ipad {
+      width: 80px; height: 106px; border-radius: 10px;
+      border: 2.5px solid rgba(156,166,85,.18);
+      background: rgba(156,166,85,.03);
+      bottom: 10%; right: 5%;
+      animation: devfloat 6.5s ease-in-out infinite .7s;
+    }
+    .deco-ipad::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 60%; height: 70%; border-radius: 4px;
+      border: 1px solid rgba(156,166,85,.12);
+    }
+    .deco-ipad::after {
+      content: ''; position: absolute;
+      bottom: 8px; left: 50%; transform: translateX(-50%);
+      width: 14px; height: 14px; border-radius: 50%;
+      border: 2px solid rgba(156,166,85,.2);
+    }
+    .deco-mac { position: absolute; bottom: 14%; left: 5%; animation: devfloat 7s ease-in-out infinite 1.4s; }
+    .deco-mac-lid {
+      width: 100px; height: 64px; border-radius: 7px 7px 0 0;
+      border: 2px solid rgba(156,166,85,.18);
+      background: rgba(156,166,85,.03); position: relative;
+    }
+    .deco-mac-lid::before {
+      content: ''; position: absolute; inset: 6px;
+      border-radius: 4px; background: rgba(156,166,85,.06);
+    }
+    .deco-mac-lid::after {
+      content: ''; position: absolute;
+      top: 4px; left: 50%; transform: translateX(-50%);
+      width: 5px; height: 5px; border-radius: 50%;
+      background: rgba(156,166,85,.2);
+    }
+    .deco-mac-base {
+      width: 110px; height: 7px; margin-left: -5px;
+      background: rgba(156,166,85,.14); border-radius: 0 0 4px 4px;
+    }
+    @keyframes devfloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      40%  { transform: translateY(-14px) rotate(2.5deg); }
+      70%  { transform: translateY(-7px) rotate(-1.5deg); }
+    }
+
+    @media (max-width: 960px) {
+      .deco-iphone, .deco-ipad, .deco-mac { display: none; }
+      .mbp-wrap { margin-top: 32px; }
+      .mbp { margin-top: 32px; }
+      .sec-sobre { padding: 84px 0; }
+    }
+    @media (max-width: 640px) {
+      .mac-lid { padding: 10px 10px 0; }
+      .mac-bartitle { font-size: .62rem; }
+      .mac-bar { padding: 8px 10px; }
+    }
+
+    /* ─── MASCOTES LATERAIS ─── */
+    .has-mascot { position: relative; }
+    .mascot-deco {
+      position: absolute; bottom: 0;
+      pointer-events: none; z-index: 0;
+      opacity: 0; transition: opacity .6s ease;
+    }
+    .mascot-deco.visible { opacity: 1; }
+    .mascot-deco img {
+      display: block; height: auto;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.35));
+    }
+    .mascot-deco.side-left  { left:  0; }
+    .mascot-deco.side-right { right: 0; }
+    @media (max-width: 1080px) { .mascot-deco { display: none; } }
+
+    /* ─── MACBOOK BROWSER REDESIGN ─── */
+    .mbp-browser {
+      background: #f2f2f7; height: 100%;
+      overflow-y: auto; overflow-x: hidden;
+      scrollbar-width: thin; scrollbar-color: #ccc #f2f2f7;
+    }
+    .mbp-browser-bar {
+      background: #e8e8ed; padding: 6px 10px;
+      display: flex; align-items: center; gap: 7px;
+      border-bottom: 1px solid #d1d1d6; position: sticky; top: 0; z-index: 1;
+    }
+    .mbr-urlbar {
+      flex: 1; background: #fff; border-radius: 5px;
+      padding: 3px 8px; font-size: .58rem; color: #666;
+      text-align: center; border: 1px solid #ddd;
+    }
+    .mbp-review-page { padding: 12px 10px; display: flex; flex-direction: column; gap: 8px; }
+    .mbr-page-title {
+      font-size: .65rem; font-weight: 700; color: #111;
+      padding: 0 2px 6px; border-bottom: 1px solid #e0e0e0; margin-bottom: 2px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .mbr-card {
+      background: #fff; border-radius: 10px; padding: 10px 12px;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .mbr-user { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .mbr-avatar {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .68rem; font-weight: 800; color: #fff;
+    }
+    .mbr-meta { flex: 1; }
+    .mbr-name { font-size: .64rem; font-weight: 700; color: #111; line-height: 1.3; }
+    .mbr-date { font-size: .56rem; color: #999; }
+    .mbr-stars { font-size: .62rem; color: #f59e0b; margin-bottom: 5px; letter-spacing: 1px; }
+    .mbr-text { font-size: .64rem; color: #333; line-height: 1.55; }
+    .mbr-tag {
+      display: inline-block; margin-top: 7px;
+      font-size: .55rem; font-weight: 700; color: #003434;
+      background: rgba(0,52,52,.07); border-radius: 4px; padding: 2px 6px;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRDXQKMP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow2"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand-row">
+      <button class="nav-menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      <a class="nav-logo" href="#" aria-label="Valore — ir para o topo">
+        <svg viewBox="233 326 631 428" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- TODO: substituir pelos dois <path> reais do logo quando o SVG for colocado em ./media/logo-valore.svg.
+               Até lá, mantemos um placeholder com o texto "V" para indicar visualmente onde o logo entra. -->
+          <path fill="currentColor" d="M548 326l-62 220h94l62-220z"/>
+          <path fill="currentColor" d="M548 528l-128 226h94l128-226z"/>
+        </svg>
+        <span>Valore</span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#como-encomendar">Como Encomendar</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#pagamento">Pagamento</a></li>
+      <li><a href="#contrato">Contrato</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="theme-toggle" role="group" aria-label="Tema">
+        <button class="theme-btn" data-t="light" title="Tema claro">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="theme-btn" data-t="system" title="Tema do sistema">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </button>
+        <button class="theme-btn" data-t="dark" title="Tema escuro">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+      <a href="https://wa.me/5521969662237" class="nav-cta" target="_blank">📦 Fazer Encomenda <span class="arr">→</span></a>
+    </div>
+  </nav>
+
+  <!-- MOBILE QUICK NAV -->
+  <div class="mobile-quick-nav" id="mobileQuickNav">
+    <a href="#sobre">📱 Sobre</a>
+    <a href="#como-encomendar">📋 Encomenda</a>
+    <a href="#depoimentos">⭐ Opiniões</a>
+    <a href="#pagamento">💳 Pagar</a>
+    <a href="#faq">❓ FAQ</a>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre">Sobre o Gustavo</a>
+    <a href="#como-encomendar">Como Encomendar</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#pagamento">Pagamento</a>
+    <a href="#contrato">Contrato</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://www.instagram.com/gu.valore/" target="_blank" style="display:flex;align-items:center;gap:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram @gu.valore</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-wrap">
+    <!-- Foto full-bleed: cobre o lado direito da seção inteira -->
+    <div class="hero-photo-bg">
+      <img src="./media/gustavo-hero.jpg" alt="Gustavo — Fundador da Valore">
+    </div>
+
+    <div class="hero-grid">
+
+      <!-- TEXTO -->
+      <div class="hero-left">
+        <h1 class="hero-headline">
+          Encomende seu<br/>
+          <span class="typing-word"><span id="typeTarget">iPhone</span><span class="cursor"></span></span><br/>
+          direto dos EUA com a Valore.
+        </h1>
+        <p class="hero-sub">
+          Importação, taxas e burocracia? <strong style="color:var(--accent)">A Valore cuida de tudo.</strong>
+          Você recebe o seu produto <strong style="color:var(--accent)">lacrado e original</strong>
+          e <strong style="color:var(--accent)">acompanha cada etapa</strong> até a entrega na sua casa.
+        </p>
+      </div>
+
+      <!-- VISUAL — badges flutuam sobre a foto de fundo -->
+      <div class="hero-visual">
+        <div class="fb fb1">🔒 Garantia jurídica</div>
+        <div class="fb fb2">🇺🇸 Produto dos EUA</div>
+        <div class="fb fb3">🧾 Nota fiscal inclusa</div>
+        <div class="fb fb4">📦 Frete grátis</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item"><div class="trust-ico">🧾</div><div class="trust-txt">Nota fiscal em todo pedido</div></div>
+      <div class="trust-item"><div class="trust-ico">📄</div><div class="trust-txt">Contrato assinado antes do pagamento</div></div>
+      <div class="trust-item"><div class="trust-ico">📦</div><div class="trust-txt">Frete grátis</div></div>
+      <div class="trust-item trust-item--wide"><div class="trust-ico">💬</div><div class="trust-txt">Atendimento consultivo pra te ajudar a escolher o produto ideal</div></div>
+    </div>
+  </div>
+
+  <!-- UNBOXING STRIP (prova visual rápida) -->
+  <div class="unboxing-strip">
+    <div class="unboxing-inner">
+      <div class="unboxing-row">
+        <figure class="unboxing-card">
+          <img src="./media/unboxing/unboxing-1.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
+          <figcaption>Nome · Produto</figcaption>
+        </figure>
+        <figure class="unboxing-card">
+          <img src="./media/unboxing/unboxing-2.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
+          <figcaption>Nome · Produto</figcaption>
+        </figure>
+        <figure class="unboxing-card">
+          <img src="./media/unboxing/unboxing-3.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
+          <figcaption>Nome · Produto</figcaption>
+        </figure>
+        <figure class="unboxing-card">
+          <img src="./media/unboxing/unboxing-4.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
+          <figcaption>Nome · Produto</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="breathing-divider"></div>
+
+  <!-- 2ª SEÇÃO: PROVA SOCIAL EM VÍDEO -->
+  <div class="sec-alt" id="prova-social">
+    <div class="sec-inner">
+      <div class="center reveal">
+        <span class="sec-label">Valore — Prova Social</span>
+        <h2 class="sec-title">Veja quem já encomendou e <span class="g">aprovou.</span></h2>
+        <p class="sec-sub">Reações reais de clientes que receberam seus produtos Apple em casa — lacrados e no prazo.</p>
+      </div>
+      <div class="video-gallery">
+        <div class="video-item reveal reveal-delay-1">
+          <h3 class="video-headline">"Pagar antecipado é um risco enorme, mas se for com o Gustavo pode pagar tranquilo."</h3>
+          <div class="video-box">
+            <video playsinline controls>
+              <source src="./media/depoimentos/video-depoimento-001.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="video-item reveal reveal-delay-2">
+          <h3 class="video-headline">"Foi uma experiência de compra muito diferente."</h3>
+          <div class="video-box">
+            <video playsinline controls>
+              <source src="./media/depoimentos/video-depoimento-002.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3ª SEÇÃO: ENCOMENDE COM SEGURANÇA -->
+  <div class="sec has-mascot" id="diferenciais">
+    <div class="sec-inner">
+      <span class="sec-label">Por que a Valore</span>
+      <h2 class="sec-title">Encomende com <span class="g">segurança.</span></h2>
+      <p class="sec-sub">Sua encomenda é formalizada em contrato jurídico, garantindo que você receba exatamente o que pediu.</p>
+      <div class="card-grid">
+        <div class="mcard">
+          <div class="ic">🔒</div>
+          <h3>Contrato com validade jurídica</h3>
+          <p>Sua encomenda é um documento legal. Não recebeu? Seu dinheiro volta. Garantido por cláusula contratual.</p>
+        </div>
+        <div class="mcard">
+          <div class="ic">🇺🇸</div>
+          <h3>Produto lacrado dos EUA</h3>
+          <p>100% originais, lacrados direto dos Estados Unidos. Sem recondicionado, sem surpresa. O produto exato que você pediu.</p>
+        </div>
+        <div class="mcard">
+          <div class="ic">🧾</div>
+          <h3>Nota Fiscal em todo pedido</h3>
+          <p>Cada encomenda acompanha NF. Transparência total, rastreabilidade garantida e documento oficial da sua encomenda.</p>
+        </div>
+        <div class="mcard">
+          <div class="ic">📦</div>
+          <h3>Frete Grátis</h3>
+          <p>Você não paga nada a mais pela entrega. O preço que você vê é o preço que você paga. Ponto final.</p>
+        </div>
+        <div class="mcard">
+          <div class="ic">🎯</div>
+          <h3>Personalização total</h3>
+          <p>Escolha o modelo exato, a cor certa e o armazenamento que você precisa. Sem se limitar ao estoque de loja física.</p>
+        </div>
+        <div class="mcard">
+          <div class="ic">💬</div>
+          <h3>Suporte antes, durante e depois</h3>
+          <p>Desde a escolha do produto até depois da entrega — o Gustavo está aqui pra você. A experiência Apple do jeito certo.</p>
+        </div>
+      </div>
+
+      <!-- PRAZOS -->
+      <div style="margin-top: 80px; position: relative;">
+        <span class="sec-label">Prazos reais</span>
+        <h2 class="sec-title">Você sabe exatamente <span class="g">quando vai receber.</span></h2>
+        <p class="sec-sub">Sem achismo. Prazos reais, processo rastreável, você acompanha tudo.</p>
+        <div class="prazo-grid">
+          <div class="prazo-card">
+            <div class="prazo-icon">📦</div>
+            <div>
+              <h3>Encomenda nacional</h3>
+              <p>Quando o seu modelo já está disponível no Brasil, a entrega leva de <strong style="color:var(--accent)">4 a 7 dias úteis</strong> após a confirmação do pagamento.</p>
+            </div>
+          </div>
+          <div class="prazo-card">
+            <div class="prazo-icon">🇺🇸</div>
+            <div>
+              <h3>Importação dos EUA</h3>
+              <p>Entrega em <strong style="color:var(--accent)">20 a 30 dias úteis</strong> do seu produto lacrado americano.</p>
+            </div>
+          </div>
+        </div>
+        <div class="prazo-bottom">
+          <div class="prazo-note">
+            🔍 <strong>Tudo rastreável:</strong> você acompanha cada etapa — da saída dos EUA até a sua porta. Nada de surpresa.
+          </div>
+          <div class="hero-btns">
+            <a href="https://wa.me/5521969662237" class="btn" target="_blank">
+              👉 Quero fazer minha encomenda <span class="arr">→</span>
+            </a>
+            <a href="https://wa.me/5521969662237" class="btn-ghost" target="_blank">
+              💬 Tirar dúvidas pelo WhatsApp
+            </a>
+          </div>
+          <img src="./media/mascot-mac.png" alt="" class="prazo-mascot" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 4ª SEÇÃO: MUITO PRAZER, SOU O GUSTAVO -->
+  <div class="sec-sobre has-mascot" id="sobre">
+    <!-- Mascote lateral: Gym Gustavo -->
+    <div class="mascot-deco side-right" id="mascot-right-1">
+      <img src="./media/mascot-gym.png" alt="" width="260" loading="lazy">
+    </div>
+    <div class="deco-float deco-iphone"></div>
+    <div class="deco-float deco-ipad"></div>
+    <div class="deco-float deco-mac">
+      <div class="deco-mac-lid"></div>
+      <div class="deco-mac-base"></div>
+    </div>
+    <div class="sec-inner">
+      <div class="about-grid">
+        <div class="about-vid-box reveal-left">
+          <video controls playsinline autoplay muted>
+            <source src="./media/depoimentos/gustavo-video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="about-copy reveal-right">
+          <span class="sec-label">Quem está por trás</span>
+          <h2>Muito prazer,<br/>sou o <em>Gustavo.</em></h2>
+          <p>
+            Sou fundador da Valore e especialista em produtos Apple
+            importados direto dos EUA.
+          </p>
+          <p>
+            Criei a Valore porque vi de perto o quanto as pessoas
+            <strong>queriam o produto Apple certo</strong> — lacrado, original,
+            no modelo e cor exatos — mas tinham medo de encomendar online e perder o dinheiro.
+          </p>
+          <p>
+            Desde o primeiro envio, a minha resposta pra esse medo foi simples:
+            <strong>contrato com validade jurídica.</strong>
+          </p>
+          <p>
+            Você antecipa, a gente garante por escrito. Não recebeu? Seu dinheiro
+            volta — sem enrolação. <strong>Todo envio sai com nota fiscal e frete grátis.</strong>
+          </p>
+          <div class="seal">
+            <div style="font-size:2rem;">🔒</div>
+            <div class="seal-text">
+              <strong>Você não encomenda só na fé.</strong>
+              <span>Você encomenda protegido por lei.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5ª SEÇÃO: FEEDBACKS -->
+  <div class="sec" id="depoimentos">
+    <div class="sec-inner">
+      <div class="center reveal">
+        <span class="sec-label">Feedbacks dos clientes</span>
+        <h2 class="sec-title">O que nossos clientes <span class="g">estão dizendo.</span></h2>
+        <p class="sec-sub">Avaliações reais de quem já encomendou com a Valore.</p>
+      </div>
+      <div class="mbp-wrap">
+        <!-- Tela: fica atrás do overlay -->
+        <div class="mbp-screen-area">
+          <div class="mbp-menubar">
+            <div class="mbp-dots">
+              <span class="md-r"></span><span class="md-y"></span><span class="md-g"></span>
+            </div>
+            <div class="mbp-title">Avaliações — Valore</div>
+          </div>
+          <div class="mbp-browser">
+            <div class="mbp-browser-bar">
+              <div class="mbr-urlbar">🔒 valore.com.br/avaliacoes</div>
+            </div>
+            <div class="mbp-review-page">
+              <div class="mbr-page-title">⭐ Avaliações de clientes</div>
+
+              <div class="mbr-card">
+                <div class="mbr-user">
+                  <div class="mbr-avatar" style="background:#1a6b3c;">LA</div>
+                  <div class="mbr-meta">
+                    <div class="mbr-name">Lucas A.</div>
+                    <div class="mbr-date">há 3 dias</div>
+                  </div>
+                </div>
+                <div class="mbr-stars">★★★★★</div>
+                <div class="mbr-text">"Pagar antecipado é sempre um risco enorme, mas se for com o Gustavo pode pagar tranquilo. Produto chegou lacrado, original, dentro do prazo."</div>
+                <div class="mbr-tag">MacBook Air M3</div>
+              </div>
+
+              <div class="mbr-card">
+                <div class="mbr-user">
+                  <div class="mbr-avatar" style="background:#003434;">FM</div>
+                  <div class="mbr-meta">
+                    <div class="mbr-name">Fernanda M.</div>
+                    <div class="mbr-date">há 1 semana</div>
+                  </div>
+                </div>
+                <div class="mbr-stars">★★★★★</div>
+                <div class="mbr-text">"Foi uma experiência de compra muito diferente. O contrato me deu total segurança. iPhone chegou perfeito, lacrado e com nota fiscal."</div>
+                <div class="mbr-tag">iPhone 16 Pro</div>
+              </div>
+
+              <div class="mbr-card">
+                <div class="mbr-user">
+                  <div class="mbr-avatar" style="background:#7a8442;">RC</div>
+                  <div class="mbr-meta">
+                    <div class="mbr-name">Rafael C.</div>
+                    <div class="mbr-date">há 2 semanas</div>
+                  </div>
+                </div>
+                <div class="mbr-stars">★★★★★</div>
+                <div class="mbr-text">"Já comprei duas vezes. Atendimento incrível, produto chegou antes do prazo. O Gustavo responde tudo no Instagram pessoalmente."</div>
+                <div class="mbr-tag">iPad Pro M4 · iPhone 15</div>
+              </div>
+
+              <div class="mbr-card">
+                <div class="mbr-user">
+                  <div class="mbr-avatar" style="background:#8b4513;">BT</div>
+                  <div class="mbr-meta">
+                    <div class="mbr-name">Beatriz T.</div>
+                    <div class="mbr-date">há 3 semanas</div>
+                  </div>
+                </div>
+                <div class="mbr-stars">★★★★★</div>
+                <div class="mbr-text">"Nunca pensei que comprar Apple dos EUA podia ser tão simples. Tudo documentado, tudo seguro. Produto 100% original."</div>
+                <div class="mbr-tag">MacBook Pro M4</div>
+              </div>
+
+              <div class="mbr-card">
+                <div class="mbr-user">
+                  <div class="mbr-avatar" style="background:#4a4a9e;">JP</div>
+                  <div class="mbr-meta">
+                    <div class="mbr-name">João P.</div>
+                    <div class="mbr-date">há 1 mês</div>
+                  </div>
+                </div>
+                <div class="mbr-stars">★★★★★</div>
+                <div class="mbr-text">"O diferencial da Valore é o contrato. Me sentei, li com calma, assinei e só então paguei. Meu iPhone chegou em 18 dias direto dos EUA."</div>
+                <div class="mbr-tag">iPhone 16 Plus</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- PNG real do MacBook Air por cima -->
+        <img class="mbp-overlay" src="./media/macbook-overlay.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- COMO ENCOMENDAR -->
+  <div class="sec-light" id="como-encomendar">
+    <div class="sec-inner">
+      <div class="center reveal" style="margin-bottom: 0;">
+        <span class="sec-label">Passo a passo</span>
+        <h2 class="sec-title">Como <span class="g">Encomendar?</span></h2>
+        <p class="sec-sub" style="margin-bottom: 56px;">Do primeiro contato até o produto Apple na sua mão: simples, transparente e seguro.</p>
+      </div>
+      <div class="journey-wrap">
+        <div class="journey-scroll journey-6">
+
+          <div class="jstep">
+            <div class="jstep-icon">💬</div>
+            <div class="jstep-label">
+              <strong>Contato inicial</strong>
+              <p>Me chama no WhatsApp com o produto que você quer.</p>
+            </div>
+          </div>
+
+          <div class="jstep">
+            <div class="jstep-icon">📱</div>
+            <div class="jstep-label">
+              <strong>Escolha seu modelo</strong>
+              <p>Te ajudo a escolher o produto ideal pro seu uso, ou <a href="[URL_DO_QUIZ]" target="_blank">faça o quiz</a>.</p>
+            </div>
+          </div>
+
+          <div class="jstep">
+            <div class="jstep-icon">📄</div>
+            <div class="jstep-label">
+              <strong>Contrato de encomenda</strong>
+              <p>Modelo, cor, valor e prazo por escrito, com assinatura digital e validade jurídica.</p>
+            </div>
+          </div>
+
+          <div class="jstep">
+            <div class="jstep-icon">💳</div>
+            <div class="jstep-label">
+              <strong>Pagamento</strong>
+              <p>Em até 12x, só depois do contrato assinado.</p>
+            </div>
+          </div>
+
+          <div class="jstep jstep-featured">
+            <div class="jstep-icon">🇺🇸</div>
+            <div class="jstep-label">
+              <strong>Importação <span style="color:#bfcb5b">por nossa conta</span></strong>
+              <p>Taxas, impostos e burocracia ficam com a Valore. Você só acompanha cada etapa do trajeto.</p>
+            </div>
+          </div>
+
+          <div class="jstep">
+            <div class="jstep-icon">📦</div>
+            <div class="jstep-label">
+              <strong>Entrega na sua casa</strong>
+              <p>Produto lacrado e original na sua porta. Unboxing inesquecível. 🎉</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="steps-cta">
+        <a href="https://wa.me/5521969662237" class="btn" target="_blank">📦 Quero começar minha encomenda <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PAGAMENTO -->
+  <div class="sec-alt" id="pagamento">
+    <div class="sec-inner">
+      <span class="sec-label">Formas de pagamento</span>
+      <h2 class="sec-title">Flexibilidade para pagar <span class="g">do seu jeito.</span></h2>
+      <p class="sec-sub">Transparência total. Sem letras miúdas. Sem pegadinha.</p>
+      <div class="pay-grid">
+        <div class="pay-card">
+          <h3>💸 PIX — À Vista</h3>
+          <ul class="pay-list">
+            <li>Melhor preço garantido</li>
+            <li>Pagamento rápido e simples</li>
+            <li>Desconto especial no valor final</li>
+          </ul>
+        </div>
+        <div class="pay-card feat">
+          <div class="pay-top">⭐ Favorito dos clientes</div>
+          <h3>🔀 Combinado</h3>
+          <ul class="pay-list">
+            <li>Uma parte à vista no PIX</li>
+            <li>O restante parcelado no cartão</li>
+            <li>Flexibilidade máxima</li>
+            <li>Mantém desconto parcial</li>
+          </ul>
+        </div>
+        <div class="pay-card">
+          <h3>💳 Cartão de Crédito</h3>
+          <ul class="pay-list">
+            <li>Parcelamento em até 12x</li>
+            <li>Podendo usar mais de 1 cartão</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- QUIZ BANNER -->
+  <div class="quiz-banner" style="background: var(--bg);">
+    <div class="quiz-banner-inner">
+      <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px;">Descubra seu modelo ideal</span>
+      <h2>Não sabe qual produto Apple<br/><em>é o certo pra você?</em></h2>
+      <p>Responda algumas perguntas rápidas e descubra qual o produto Apple ideal para o seu uso, antes de fazer sua encomenda.</p>
+      <a href="[URL_DO_QUIZ]" class="btn" target="_blank">
+        🎯 Fazer o Quiz de Modelo Ideal <span class="arr">→</span>
+      </a>
+      <p style="margin-top:14px;font-size:.78rem;color:var(--muted);">Rápido, gratuito e sem compromisso.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTRATO -->
+  <div class="sec-alt" id="contrato">
+    <div class="sec-inner">
+      <div class="contract-grid">
+        <img class="contract-mascot" src="./media/mascot-ipad.png" alt="" loading="lazy">
+        <div class="contract-copy">
+          <span class="sec-label">Sua proteção</span>
+          <h2>Segurança em <em>primeiro lugar.</em></h2>
+          <p>Antes de qualquer pagamento, te enviamos o <strong>contrato de encomenda</strong> com todos os seus dados e os nossos. Ele existe pra te assegurar de tudo que possa acontecer com a sua encomenda.</p>
+          <ul class="contract-pts">
+            <li>Seus dados e os dados da empresa</li>
+            <li>O produto exato (modelo, cor, armazenamento)</li>
+            <li>Valor e forma de pagamento</li>
+            <li>Prazo total de entrega</li>
+            <li>Cláusulas de atraso, taxas alfandegárias, extravio e mais</li>
+          </ul>
+          <p>Tudo autenticado e assinado digitalmente. <strong>Você paga depois de assinar. Não antes.</strong></p>
+          <div class="quiz-inline">
+            <div class="qi-text">
+              <strong>🤔 Ainda não sabe qual modelo é o ideal?</strong>
+              <span>Responda 3 perguntas e descubra o produto Apple perfeito pro seu perfil.</span>
+            </div>
+            <a href="[URL_DO_QUIZ]" class="btn-quiz" target="_blank">🎯 Fazer o Quiz →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <div class="sec-light" id="faq">
+    <div class="sec-inner">
+      <div class="center reveal">
+        <span class="sec-label">Dúvidas Frequentes</span>
+        <h2 class="sec-title">Tudo o que você precisa saber <span class="g">antes de encomendar.</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Qual o CNPJ da empresa? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">Valore — CNPJ: <strong>48.708.378/0001-70</strong>. Empresa devidamente registrada e legalizada. Todos os envios são acompanhados de nota fiscal.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Os produtos são novos? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">Sim. Novos, lacrados e com <strong>1 ano de garantia mundial Apple</strong>.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Qual o prazo de entrega? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">Depende de onde vem o seu produto. Encomenda nacional: de 4 a 7 dias úteis. Importação direto dos EUA: de 20 a 30 dias úteis. O prazo exato fica no contrato, antes de qualquer pagamento.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Os produtos são a pronta entrega? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">Não. Trabalhamos sob encomenda por dois motivos:<br/><strong>1. Procedência garantida:</strong> você sabe exatamente de onde vem o seu produto, com toda a licitude.<br/><strong>2. Do seu jeito:</strong> você recebe exatamente o modelo, a cor, a memória e a configuração que escolheu.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Qual a garantia de que vou receber o produto? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">O contrato. Ele é a sua maior garantia, e por isso nada acontece sem ele.<br/>O contrato te assegura de tudo que possa acontecer com a sua encomenda: tem cláusulas de atraso e de extravio, e todas as taxas de importação já são pagas pela Valore e estão inclusas no valor do contrato.<br/><strong>Você está protegido e assegurado por lei.</strong></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Como acompanho meu pedido? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">Após o pagamento, você recebe atualizações em cada etapa do processo — importação, chegada ao Brasil e despacho para entrega. Tudo rastreável, nada de surpresa.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Aceita troca por usado? <span class="faq-arr">▾</span></button>
+          <div class="faq-a">Entre em contato pelo WhatsApp para consultar as condições de troca disponíveis. Avaliamos caso a caso.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CTA FINAL -->
+  <div class="final-cta">
+    <div class="final-inner">
+      <span class="sec-label" style="display:block;text-align:center;margin-bottom:16px;">Pronto pra encomendar?</span>
+      <h2>Venha viver a Experiência Apple<br/><em>do jeito certo.</em></h2>
+      <p>Encomende com segurança: produto lacrado, nota fiscal, contrato e frete grátis. Agora é a sua vez.</p>
+      <div class="final-btns">
+        <a href="https://wa.me/5521969662237" class="btn" target="_blank">
+          👉 Quero fazer minha encomenda <span class="arr">→</span>
+        </a>
+        <a href="https://www.instagram.com/gu.valore/" class="btn-ghost" target="_blank" style="display:inline-flex;align-items:center;gap:8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @gu.valore
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo footer-brand-logo"><span>Valore</span></span>
+        <p>Experiência Apple dos EUA com segurança, nota fiscal, contrato jurídico e frete grátis.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#sobre">Sobre o Gustavo</a>
+        <a href="#como-encomendar">Como Encomendar</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#pagamento">Pagamento</a>
+        <a href="#contrato">Contrato</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <p>Seg a Sex: 09h às 21h</p>
+        <p>Sáb: 09h às 13h</p>
+        <p>Dom: Fechado</p>
+        <div style="margin-top:12px;display:flex;align-items:center;gap:8px;">
+          <a href="https://www.instagram.com/gu.valore/" target="_blank" style="color:var(--muted);text-decoration:none;display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.instagram.com/gu.valore/" target="_blank">@gu.valore</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Valore. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileQuickNav = document.getElementById('mobileQuickNav');
+
+    menuToggle?.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+    const heroWrap = document.querySelector('.hero-wrap');
+    const quickNavObs = new IntersectionObserver((entries) => {
+      if (window.innerWidth <= 960) {
+        entries[0].isIntersecting ? mobileQuickNav.classList.remove('show') : mobileQuickNav.classList.add('show');
+      }
+    }, { threshold: 0 });
+    if (heroWrap) quickNavObs.observe(heroWrap);
+    mobileQuickNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileQuickNav.classList.remove('show')));
+
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+
+    // Autoplay first video on scroll
+    const vidObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const vid = entry.target;
+        const isFirst = vid.closest('.video-box') === document.querySelector('.video-box');
+        if (entry.isIntersecting && isFirst) vid.play(); else vid.pause();
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.video-box video').forEach(v => vidObs.observe(v));
+
+    // Typewriter cycling: iPhone → MacBook → iPad
+    (function() {
+      const words = ['iPhone', 'MacBook', 'iPad'];
+      const el = document.getElementById('typeTarget');
+      if (!el) return;
+      let wi = 0, ci = words[0].length, deleting = true;
+
+      function tick() {
+        const word = words[wi];
+        if (deleting) {
+          ci--;
+          el.textContent = word.slice(0, ci);
+        } else {
+          ci++;
+          el.textContent = word.slice(0, ci);
+        }
+
+        let delay = deleting ? 65 : 105;
+        if (!deleting && ci === word.length) {
+          delay = 2400;
+          deleting = true;
+        } else if (deleting && ci === 0) {
+          deleting = false;
+          wi = (wi + 1) % words.length;
+          delay = 320;
+        }
+        setTimeout(tick, delay);
+      }
+      setTimeout(tick, 2400);
+    })();
+
+    // Scroll Reveal
+    (function() {
+      const sel = '.reveal, .reveal-left, .reveal-right';
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+      document.querySelectorAll(sel).forEach(el => obs.observe(el));
+    })();
+
+    // Mascotes laterais — aparecem com fade ao entrar na viewport
+    (function() {
+      const mascotObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.querySelectorAll('.mascot-deco').forEach(m => m.classList.add('visible'));
+          }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.has-mascot').forEach(sec => mascotObs.observe(sec));
+    })();
+
+    // MacBook browser — auto-scroll suave nos reviews
+    (function() {
+      const browser = document.querySelector('.mbp-browser');
+      if (!browser) return;
+      let scrolling = true;
+      const speed = 0.4;
+      function autoScroll() {
+        if (!scrolling) return;
+        browser.scrollTop += speed;
+        if (browser.scrollTop + browser.clientHeight >= browser.scrollHeight - 2) {
+          setTimeout(() => { browser.scrollTop = 0; }, 2200);
+        }
+        requestAnimationFrame(autoScroll);
+      }
+      browser.addEventListener('mouseenter', () => scrolling = false);
+      browser.addEventListener('mouseleave', () => { scrolling = true; autoScroll(); });
+      setTimeout(autoScroll, 2000);
+    })();
+
+    // ─── THEME TOGGLE ───
+    (function() {
+      const THEME_KEY = 'valore-theme';
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function resolveTheme(pref) {
+        if (pref === 'system') return mq.matches ? 'dark' : 'light';
+        return pref;
+      }
+
+      function applyTheme(pref) {
+        const t = resolveTheme(pref);
+        document.documentElement.dataset.theme = t;
+        document.querySelectorAll('.theme-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.t === pref)
+        );
+        localStorage.setItem(THEME_KEY, pref);
+      }
+
+      const saved = localStorage.getItem(THEME_KEY) || 'dark';
+      applyTheme(saved);
+
+      document.querySelectorAll('.theme-btn').forEach(b =>
+        b.addEventListener('click', () => applyTheme(b.dataset.t))
+      );
+
+      mq.addEventListener('change', () => {
+        if ((localStorage.getItem(THEME_KEY) || 'dark') === 'system') applyTheme('system');
+      });
+    })();
+
+  </script>
+</body>
+</html>
