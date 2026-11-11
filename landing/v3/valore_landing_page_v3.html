@@ -11,6 +11,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Valore — Experiência Apple dos EUA</title>
+  <meta name="description" content="Importação de iPhone, MacBook e iPad direto dos EUA com nota fiscal, contrato e atendimento pessoal. Encomende com o Gustavo." />
+  <meta name="theme-color" content="#07090a" />
+  <link rel="canonical" href="https://valore.com.br/" />
+  <link rel="icon" type="image/svg+xml" href="./media/logo-valore.svg" />
+  <link rel="apple-touch-icon" href="./media/favicon-apple.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Valore" />
+  <meta property="og:title" content="Valore — Experiência Apple dos EUA" />
+  <meta property="og:description" content="Importação de iPhone, MacBook e iPad direto dos EUA com nota fiscal, contrato e atendimento pessoal." />
+  <meta property="og:url" content="https://valore.com.br/" />
+  <meta property="og:image" content="https://valore.com.br/media/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Valore — Experiência Apple dos EUA" />
+  <meta name="twitter:description" content="Importação de iPhone, MacBook e iPad direto dos EUA com nota fiscal, contrato e atendimento pessoal." />
+  <meta name="twitter:image" content="https://valore.com.br/media/og-cover.jpg" />
   <script>!function(){var t=localStorage.getItem('valore-theme')||'dark';var d=t==='system'?window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light':t;document.documentElement.dataset.theme=d}()</script>
   <style>
     @font-face { font-family: 'Neue Montreal'; src: url('./fonts/NeueMontreal-Light.woff2')   format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
@@ -995,6 +1017,27 @@
       font-size: .55rem; font-weight: 700; color: #003434;
       background: rgba(0,52,52,.07); border-radius: 4px; padding: 2px 6px;
     }
+
+    /* ─── ACESSIBILIDADE: motion reduzida ─── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; }
+      .mascot-deco { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* ─── SKIP LINK ─── */
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--accent); color: #07090a;
+      padding: 10px 18px; border-radius: 0 0 8px 0;
+      font-weight: 600; z-index: 9999;
+    }
+    .skip-link:focus { left: 0; outline: 2px solid var(--green); }
   </style>
 
 </head>
@@ -1003,6 +1046,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRDXQKMP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <a href="#sobre" class="skip-link">Pular para o conteúdo</a>
 
   <div class="hero-bg-glow"></div>
   <div class="hero-bg-glow2"></div>
@@ -1041,7 +1086,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
       </div>
-      <a href="https://wa.me/5521969662237" class="nav-cta" target="_blank">📦 Fazer Encomenda <span class="arr">→</span></a>
+      <a href="https://wa.me/5521969662237" class="nav-cta" target="_blank" rel="noopener noreferrer">📦 Fazer Encomenda <span class="arr">→</span></a>
     </div>
   </nav>
 
@@ -1062,7 +1107,7 @@
     <a href="#pagamento">Pagamento</a>
     <a href="#contrato">Contrato</a>
     <a href="#faq">FAQ</a>
-    <a href="https://www.instagram.com/gu.valore/" target="_blank" style="display:flex;align-items:center;gap:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram @gu.valore</a>
+    <a href="https://www.instagram.com/gu.valore/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram @gu.valore</a>
   </div>
 
   <!-- HERO -->
@@ -1231,10 +1276,10 @@
             🔍 <strong>Tudo rastreável:</strong> você acompanha cada etapa — da saída dos EUA até a sua porta. Nada de surpresa.
           </div>
           <div class="hero-btns">
-            <a href="https://wa.me/5521969662237" class="btn" target="_blank">
+            <a href="https://wa.me/5521969662237" class="btn" target="_blank" rel="noopener noreferrer">
               👉 Quero fazer minha encomenda <span class="arr">→</span>
             </a>
-            <a href="https://wa.me/5521969662237" class="btn-ghost" target="_blank">
+            <a href="https://wa.me/5521969662237" class="btn-ghost" target="_blank" rel="noopener noreferrer">
               💬 Tirar dúvidas pelo WhatsApp
             </a>
           </div>
@@ -1423,7 +1468,7 @@
             <div class="jstep-icon">📱</div>
             <div class="jstep-label">
               <strong>Escolha seu modelo</strong>
-              <p>Te ajudo a escolher o produto ideal pro seu uso, ou <a href="[URL_DO_QUIZ]" target="_blank">faça o quiz</a>.</p>
+              <p>Te ajudo a escolher o produto ideal pro seu uso, ou <a href="[URL_DO_QUIZ]" target="_blank" rel="noopener noreferrer">faça o quiz</a>.</p>
             </div>
           </div>
 
@@ -1462,7 +1507,7 @@
         </div>
       </div>
       <div class="steps-cta">
-        <a href="https://wa.me/5521969662237" class="btn" target="_blank">📦 Quero começar minha encomenda <span class="arr">→</span></a>
+        <a href="https://wa.me/5521969662237" class="btn" target="_blank" rel="noopener noreferrer">📦 Quero começar minha encomenda <span class="arr">→</span></a>
       </div>
     </div>
   </div>
@@ -1513,7 +1558,7 @@
       <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px;">Descubra seu modelo ideal</span>
       <h2>Não sabe qual produto Apple<br/><em>é o certo pra você?</em></h2>
       <p>Responda algumas perguntas rápidas e descubra qual o produto Apple ideal para o seu uso, antes de fazer sua encomenda.</p>
-      <a href="[URL_DO_QUIZ]" class="btn" target="_blank">
+      <a href="[URL_DO_QUIZ]" class="btn" target="_blank" rel="noopener noreferrer">
         🎯 Fazer o Quiz de Modelo Ideal <span class="arr">→</span>
       </a>
       <p style="margin-top:14px;font-size:.78rem;color:var(--muted);">Rápido, gratuito e sem compromisso.</p>
@@ -1544,7 +1589,7 @@
               <strong>🤔 Ainda não sabe qual modelo é o ideal?</strong>
               <span>Responda 3 perguntas e descubra o produto Apple perfeito pro seu perfil.</span>
             </div>
-            <a href="[URL_DO_QUIZ]" class="btn-quiz" target="_blank">🎯 Fazer o Quiz →</a>
+            <a href="[URL_DO_QUIZ]" class="btn-quiz" target="_blank" rel="noopener noreferrer">🎯 Fazer o Quiz →</a>
           </div>
         </div>
       </div>
@@ -1602,10 +1647,10 @@
       <h2>Venha viver a Experiência Apple<br/><em>do jeito certo.</em></h2>
       <p>Encomende com segurança: produto lacrado, nota fiscal, contrato e frete grátis. Agora é a sua vez.</p>
       <div class="final-btns">
-        <a href="https://wa.me/5521969662237" class="btn" target="_blank">
+        <a href="https://wa.me/5521969662237" class="btn" target="_blank" rel="noopener noreferrer">
           👉 Quero fazer minha encomenda <span class="arr">→</span>
         </a>
-        <a href="https://www.instagram.com/gu.valore/" class="btn-ghost" target="_blank" style="display:inline-flex;align-items:center;gap:8px;">
+        <a href="https://www.instagram.com/gu.valore/" class="btn-ghost" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           @gu.valore
         </a>
@@ -1635,8 +1680,8 @@
         <p>Sáb: 09h às 13h</p>
         <p>Dom: Fechado</p>
         <div style="margin-top:12px;display:flex;align-items:center;gap:8px;">
-          <a href="https://www.instagram.com/gu.valore/" target="_blank" style="color:var(--muted);text-decoration:none;display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a href="https://www.instagram.com/gu.valore/" target="_blank">@gu.valore</a>
+          <a href="https://www.instagram.com/gu.valore/" target="_blank" rel="noopener noreferrer" style="color:var(--muted);text-decoration:none;display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.instagram.com/gu.valore/" target="_blank" rel="noopener noreferrer">@gu.valore</a>
         </div>
       </div>
     </div>
@@ -1688,6 +1733,10 @@
       const words = ['iPhone', 'MacBook', 'iPad'];
       const el = document.getElementById('typeTarget');
       if (!el) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        el.textContent = words[0];
+        return;
+      }
       let wi = 0, ci = words[0].length, deleting = true;
 
       function tick() {
@@ -1741,6 +1790,7 @@
     (function() {
       const browser = document.querySelector('.mbp-browser');
       if (!browser) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       let scrolling = true;
       const speed = 0.4;
       function autoScroll() {
