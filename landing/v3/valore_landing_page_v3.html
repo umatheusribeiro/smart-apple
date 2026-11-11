@@ -406,18 +406,19 @@
 
     /* ─── UNBOXING STRIP (prova visual) ─── */
     .unboxing-strip { padding: 44px 0 0; background: var(--bg); }
-    .unboxing-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .unboxing-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
     .unboxing-row {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
     }
     .unboxing-card {
       margin: 0;
       display: flex; flex-direction: column; gap: 10px;
     }
-    .unboxing-card img {
-      width: 100%; aspect-ratio: 4 / 5;
+    .unboxing-card img,
+    .unboxing-card video {
+      width: 100%; aspect-ratio: 9 / 16;
       object-fit: cover;
       border-radius: var(--rl);
       border: 1px solid var(--border);
@@ -1157,20 +1158,34 @@
     <div class="unboxing-inner">
       <div class="unboxing-row">
         <figure class="unboxing-card">
-          <img src="./media/unboxing/unboxing-1.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
-          <figcaption>Nome · Produto</figcaption>
+          <video class="unboxing-video" muted loop playsinline preload="metadata" aria-label="Unboxing de cliente — vídeo 1">
+            <source src="./media/unboxing/unboxing-1.mp4" type="video/mp4">
+          </video>
+          <figcaption>Cliente Valore</figcaption>
         </figure>
         <figure class="unboxing-card">
-          <img src="./media/unboxing/unboxing-2.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
-          <figcaption>Nome · Produto</figcaption>
+          <video class="unboxing-video" muted loop playsinline preload="metadata" aria-label="Unboxing de cliente — vídeo 2">
+            <source src="./media/unboxing/unboxing-2.mp4" type="video/mp4">
+          </video>
+          <figcaption>Cliente Valore</figcaption>
         </figure>
         <figure class="unboxing-card">
-          <img src="./media/unboxing/unboxing-3.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
-          <figcaption>Nome · Produto</figcaption>
+          <video class="unboxing-video" muted loop playsinline preload="metadata" aria-label="Unboxing de cliente — vídeo 3">
+            <source src="./media/unboxing/unboxing-3.mp4" type="video/mp4">
+          </video>
+          <figcaption>Cliente Valore</figcaption>
         </figure>
         <figure class="unboxing-card">
-          <img src="./media/unboxing/unboxing-4.jpg" alt="Unboxing de cliente — Nome · Produto" loading="lazy">
-          <figcaption>Nome · Produto</figcaption>
+          <video class="unboxing-video" muted loop playsinline preload="metadata" aria-label="Unboxing de cliente — vídeo 4">
+            <source src="./media/unboxing/unboxing-4.mp4" type="video/mp4">
+          </video>
+          <figcaption>Cliente Valore</figcaption>
+        </figure>
+        <figure class="unboxing-card">
+          <video class="unboxing-video" muted loop playsinline preload="metadata" aria-label="Unboxing de cliente — vídeo 5">
+            <source src="./media/unboxing/unboxing-5.mp4" type="video/mp4">
+          </video>
+          <figcaption>Cliente Valore</figcaption>
         </figure>
       </div>
     </div>
@@ -1725,6 +1740,22 @@
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('.video-box video').forEach(v => vidObs.observe(v));
+
+    // Unboxing videos — autoplay muted loop quando visíveis, pause quando saem
+    (function() {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const ubObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const vid = entry.target;
+          if (entry.isIntersecting && !reduceMotion) {
+            vid.play().catch(() => {});
+          } else {
+            vid.pause();
+          }
+        });
+      }, { threshold: 0.4 });
+      document.querySelectorAll('.unboxing-video').forEach(v => ubObs.observe(v));
+    })();
 
     // Typewriter cycling: iPhone → MacBook → iPad
     (function() {
