@@ -53,6 +53,8 @@
       --purple: #003434;
       --accent: #9ca655;
       --green:  #bfcb5b;
+      --brown:  #6c4128;
+      --brown-dark: #514138;
       --text:   #eef0e6;
       --muted:  rgba(238,240,230,.68);
       --r:      16px;
@@ -154,7 +156,7 @@
     h1, h2 { font-weight: 600; letter-spacing: -0.02em; }
     h3, strong, .btn, .btn-ghost, .btn-quiz, .nav-cta { font-weight: 500; }
     .sec-label, .footer-col h4, .footer-bottom, .dep-date, .dep-handle,
-    .mbr-date, .mbr-urlbar, .hero-pill, .faq-arr { font-weight: 300; }
+    .mbr-date, .mbr-urlbar, .faq-arr { font-weight: 300; }
 
     /* ─── NAV ─── */
     nav {
@@ -605,7 +607,6 @@
     .pay-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .pay-list li { font-size: .86rem; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
     .pay-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
-    .pay-alert { margin-top: 28px; padding: 14px 18px; background: rgba(239,68,68,.07); border: 1px solid rgba(239,68,68,.18); border-radius: 12px; font-size: .84rem; color: #fca5a5; }
 
     /* ─── CONTRATO (1 coluna) ─── */
     .contract-grid { max-width: 640px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; }
@@ -663,7 +664,7 @@
     .footer-col h4 { font-size: .7rem; font-weight: 700; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
     .footer-col a, .footer-col p { display: block; color: var(--muted); font-size: .84rem; text-decoration: none; margin-bottom: 10px; line-height: 1.6; }
     .footer-col a:hover { color: var(--accent); }
-    .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: .76rem; color: var(--muted); flex-wrap: wrap; gap: 12px; }
+    .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid var(--brown-dark); display: flex; justify-content: space-between; align-items: center; font-size: .76rem; color: var(--muted); flex-wrap: wrap; gap: 12px; }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
