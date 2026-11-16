@@ -463,17 +463,45 @@
       -webkit-overflow-scrolling: touch;
       padding-bottom: 4px;
       scroll-padding: 0 8px;
+      cursor: grab;
+      user-select: none;
     }
+    .unboxing-row.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+    .unboxing-row.is-dragging img { pointer-events: none; }
     .unboxing-row::-webkit-scrollbar { display: none; }
     .unboxing-card {
       margin: 0;
-      flex: 0 0 240px;
+      flex: 0 0 calc(50% - 8px);
       scroll-snap-align: start;
       display: flex; flex-direction: column; gap: 10px;
+      cursor: zoom-in;
     }
+    .unboxing-card img { -webkit-user-drag: none; user-drag: none; }
+
+    /* Lightbox */
+    .lb-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.92);
+      display: none; align-items: center; justify-content: center;
+      z-index: 9999; padding: 40px;
+      opacity: 0; transition: opacity .2s ease;
+    }
+    .lb-overlay.is-open { display: flex; opacity: 1; }
+    .lb-overlay img {
+      max-width: 100%; max-height: 100%; object-fit: contain;
+      border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    }
+    .lb-close {
+      position: absolute; top: 20px; right: 20px;
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08);
+      color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s ease;
+    }
+    .lb-close:hover { background: rgba(255,255,255,.18); }
     .unboxing-card img,
     .unboxing-card video {
-      width: 100%; aspect-ratio: 9 / 16;
+      width: 100%; aspect-ratio: 4 / 5;
       object-fit: cover;
       border-radius: var(--rl);
       border: 1px solid var(--border);
@@ -1237,6 +1265,11 @@
     </div>
   </div>
 
+  <div class="lb-overlay" id="unboxingLightbox" aria-hidden="true" role="dialog" aria-label="Foto ampliada">
+    <button type="button" class="lb-close" aria-label="Fechar">×</button>
+    <img src="" alt="">
+  </div>
+
   <div class="breathing-divider"></div>
 
   <!-- 2ª SEÇÃO: PROVA SOCIAL EM VÍDEO -->
@@ -1818,6 +1851,60 @@
       row.addEventListener('scroll', updateNav, { passive: true });
       window.addEventListener('resize', updateNav);
       updateNav();
+
+      // Drag-to-scroll com mouse (desktop)
+      let isDown = false, startX = 0, startScroll = 0, moved = false;
+      row.addEventListener('mousedown', (e) => {
+        isDown = true; moved = false;
+        startX = e.pageX;
+        startScroll = row.scrollLeft;
+        row.classList.add('is-dragging');
+      });
+      row.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        const dx = e.pageX - startX;
+        if (Math.abs(dx) > 3) moved = true;
+        row.scrollLeft = startScroll - dx;
+      });
+      const endDrag = () => {
+        if (!isDown) return;
+        isDown = false;
+        row.classList.remove('is-dragging');
+      };
+      row.addEventListener('mouseup', endDrag);
+      row.addEventListener('mouseleave', endDrag);
+
+      // Lightbox ao clicar no card (se não arrastou)
+      const lightbox = document.getElementById('unboxingLightbox');
+      const lbImg = lightbox && lightbox.querySelector('img');
+      const lbClose = lightbox && lightbox.querySelector('.lb-close');
+      function openLightbox(src, alt) {
+        if (!lightbox) return;
+        lbImg.src = src; lbImg.alt = alt || '';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        setTimeout(() => { lbImg.src = ''; }, 200);
+      }
+      cards.forEach(card => {
+        const img = card.querySelector('img');
+        if (!img) return;
+        card.addEventListener('click', (e) => {
+          if (moved) { e.preventDefault(); e.stopPropagation(); return; }
+          openLightbox(img.currentSrc || img.src, img.alt);
+        });
+      });
+      lbClose && lbClose.addEventListener('click', closeLightbox);
+      lightbox && lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-open')) closeLightbox();
+      });
     })();
 
     // Typewriter cycling: iPhone → MacBook → iPad
