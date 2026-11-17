@@ -24,25 +24,31 @@ Fazer deploy da LP na HostGator, deixar o site acessível no domínio final e co
 
 ---
 
-## 📎 Arquivos do projeto (anexos nesta mensagem)
+## 📎 Como pegar os arquivos do projeto
 
-Vou anexar:
+**Modo recomendado — clona o repo GitHub** (tudo que você precisa já está lá):
 
-1. **`valore_landing_page_v3.html`** — arquivo HTML principal da LP (**precisa virar `index.html` no servidor**)
-2. **Pasta `fonts/`** — 4 fontes Neue Montreal (.woff2):
-   - NeueMontreal-Light.woff2
-   - NeueMontreal-Regular.woff2
-   - NeueMontreal-Medium.woff2
-   - NeueMontreal-Bold.woff2
-3. **Pasta `media/`** — assets visuais:
-   - `logo-valore.svg` (logo oficial)
-   - `unboxing/` (4 fotos: unboxing-1.jpg até unboxing-4.jpg)
-   - `depoimentos/` (3 vídeos: video-depoimento-001.mp4, video-depoimento-002.mp4, gustavo-video.mp4)
-   - `produtos/` (fotos dos produtos)
-   - `mascot-gym.png`, `mascot-mac.png`, `mascot-ipad.png`, `mascots-full.png`
-   - `gustavo-hero.jpg`, `macbook-mockup.png`, `macbook-overlay.png`, `video-animado-macbook.mp4`
+```bash
+git clone https://github.com/umatheusribeiro/smart-apple.git
+cd smart-apple/landing/v3
+ls
+```
+
+Você vai encontrar:
+
+- **`valore_landing_page_v3.html`** — arquivo HTML principal (**renomeia pra `index.html` antes de subir**)
+- **`fonts/`** — 4 fontes Neue Montreal (.woff2)
+- **`media/`** — assets visuais:
+  - `logo-valore.svg` (logo oficial)
+  - `unboxing/` (4 fotos: unboxing-1.jpg até unboxing-4.jpg)
+  - `depoimentos/` (vídeos: video-depoimento-001.mp4, video-depoimento-002.mp4, gustavo-video.mp4)
+  - `produtos/` (fotos dos produtos)
+  - `mascot-gym.png`, `mascot-mac.png`, `mascot-ipad.png`, `mascots-full.png`
+  - `gustavo-hero.jpg`, `macbook-mockup.png`, `macbook-overlay.png`, `video-animado-macbook.mp4`
 
 **Importante:** todos os caminhos no HTML são **relativos** (`./media/...`, `./fonts/...`), então a estrutura de pastas precisa ser preservada tal como está.
+
+> **Alternativa:** se não quiser usar git, eu posso te mandar os arquivos anexados na conversa OU um link de Google Drive público. Me avisa qual prefere. (Drive tem atrito — cada arquivo precisa ser baixado individualmente — então git é o caminho mais rápido.)
 
 ---
 
