@@ -718,6 +718,70 @@
     .footer-col a, .footer-col p { display: block; color: var(--muted); font-size: .84rem; text-decoration: none; margin-bottom: 10px; line-height: 1.6; }
     .footer-col a:hover { color: var(--accent); }
     .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid var(--brown-dark); display: flex; justify-content: space-between; align-items: center; font-size: .76rem; color: var(--muted); flex-wrap: wrap; gap: 12px; }
+    .footer-dev a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .footer-dev a:hover { text-decoration: underline; }
+
+    /* ─── AJUSTES PÓS-VALIDAÇÃO (feedback cliente) ─── */
+    /* #sobre — mascot-gym bem na margem inferior */
+    #sobre .mascot-deco.side-right { bottom: -12px; }
+
+    /* #contrato — menos vazio + mascote maior */
+    #contrato { padding: 72px 0 80px; }
+    #contrato .contract-mascot { width: 300px; max-width: 80%; margin-bottom: 28px; }
+
+    /* #depoimentos — título mais próximo do macbook */
+    #depoimentos { padding: 72px 0 88px; }
+    #depoimentos .sec-sub { margin-bottom: 24px; }
+    #depoimentos .mbp-wrap { margin-top: -12px; }
+
+    /* FAQ — fundo invertido pra quebrar o ritmo visual */
+    #faq {
+      background: #f2f4ec;
+      background-image:
+        radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0,52,52,.06), transparent 70%);
+    }
+    #faq::before { background: linear-gradient(90deg, transparent, rgba(122,132,66,.35), transparent); }
+    #faq .sec-label { color: #7a8442; }
+    #faq .sec-title { color: #1a1e0e; }
+    #faq .sec-title .g { -webkit-text-fill-color: initial; color: #7a8442; background: none; }
+    #faq .faq-item {
+      background: #ffffff;
+      border-color: rgba(26,30,14,0.08);
+      box-shadow: 0 2px 10px rgba(26,30,14,.04);
+    }
+    #faq .faq-item.open {
+      border-color: rgba(122,132,66,.4);
+      box-shadow: 0 4px 20px rgba(122,132,66,.15);
+    }
+    #faq .faq-q { color: #1a1e0e; }
+    #faq .faq-q:hover { color: #7a8442; }
+    #faq .faq-arr { color: #7a8442; }
+    #faq .faq-a { color: #5a5a4e; }
+    #faq .faq-a strong { color: #1a1e0e; }
+
+    [data-theme="light"] #faq {
+      background: #003434;
+      background-image:
+        radial-gradient(ellipse 70% 50% at 50% 50%, rgba(212,220,122,.08), transparent 70%);
+    }
+    [data-theme="light"] #faq::before { background: linear-gradient(90deg, transparent, rgba(212,220,122,.35), transparent); }
+    [data-theme="light"] #faq .sec-label { color: #d4dc7a; }
+    [data-theme="light"] #faq .sec-title { color: #eef0e6; }
+    [data-theme="light"] #faq .sec-title .g { -webkit-text-fill-color: initial; color: #d4dc7a; background: none; }
+    [data-theme="light"] #faq .faq-item {
+      background: #004d4d;
+      border-color: rgba(212,220,122,.18);
+      box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    }
+    [data-theme="light"] #faq .faq-item.open {
+      border-color: rgba(212,220,122,.5);
+      box-shadow: 0 4px 20px rgba(212,220,122,.15);
+    }
+    [data-theme="light"] #faq .faq-q { color: #eef0e6; }
+    [data-theme="light"] #faq .faq-q:hover { color: #d4dc7a; }
+    [data-theme="light"] #faq .faq-arr { color: #d4dc7a; }
+    [data-theme="light"] #faq .faq-a { color: #c8d2a8; }
+    [data-theme="light"] #faq .faq-a strong { color: #eef0e6; }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
@@ -1387,7 +1451,7 @@
   <div class="sec-sobre has-mascot" id="sobre">
     <!-- Mascote lateral: Gym Gustavo -->
     <div class="mascot-deco side-right" id="mascot-right-1">
-      <img src="./media/mascot-gym.png" alt="" width="260" loading="lazy">
+      <img src="./media/mascot-gym.png" alt="" width="340" loading="lazy">
     </div>
     <div class="deco-float deco-iphone"></div>
     <div class="deco-float deco-ipad"></div>
@@ -1779,6 +1843,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Valore. Todos os direitos reservados.</span>
+      <span class="footer-dev">Desenvolvido por <a href="https://www.instagram.com/umatheusribeiro/" target="_blank" rel="noopener noreferrer">@umatheusribeiro</a></span>
     </div>
   </footer>
 
